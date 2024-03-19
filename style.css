@@ -81,12 +81,12 @@ section .text a {
 
 section .image {
     width: 30%;
-    transform: 1s;
+    transform: .5s;
 }
 
 .zoomed-in {
     transform: scale(1.2);
-    transition: transform 1.3s ease; /* Transition duration set to 1.5 seconds */
+    transition: transform 1.3s ease;
 }
 section .image img {
     width: 180px;
@@ -111,3 +111,4 @@ section .image img {
 .icons img:hover {
     transform: scale(1.2);
 }
+
