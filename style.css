@@ -97,6 +97,8 @@ section .image img {
 
 section .icons {
     position: absolute;
+    top: 110%;
+    left: 50%;
     transform: translateX(-50%);
 }
 

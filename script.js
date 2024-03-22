@@ -30,7 +30,7 @@ function nav(){
         menu.style.width = "50%";
         menu.style.transition = "1s";
     }, 0);
-    
+    return true ;
 }
 
 function menu_close() {
@@ -40,5 +40,10 @@ function menu_close() {
     setTimeout(() => {menu.style.display = "none";}, 900);
 }
 
-// document.body.onclick = menu_close;
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('svg')) {
+        return 0;
+    }
+    menu_close();
+});
 
