@@ -12,14 +12,30 @@
 
         <header>
             <a href="#"><img src="iphon_imgs/logo.png" class="logo"></a>
-            <ul>
+            <ul class="menu">
                 <li><a href="#" class="home">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">News</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
+                <svg onclick="nav()" class="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 18L20 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 12L20 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 6L20 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
         </header>
+
+        <div class="div_menu">
+            <img onclick="menu_close()" src="iphon_imgs/arrow_icon.png" class="aside_icon">
+            <ul class="menu_icon">
+                <li><a href="#" class="home1">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
 
         <section>
             <div class="text">
@@ -28,7 +44,6 @@
                     Quisquam fugiat perspiciatis</p>
                     <a href="#">All Products</a>
             </div>
-
             <div class="image">
                 <img class="img" src="iphon_imgs/0.png">
             </div>
