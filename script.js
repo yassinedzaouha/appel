@@ -47,3 +47,6 @@ document.addEventListener('click', function(event) {
     menu_close();
 });
 
+function menu_color(color){
+    menu.style.background = color;
+}
