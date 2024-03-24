@@ -30,6 +30,7 @@ function nav(){
         menu.style.width = "50%";
         menu.style.transition = "1s";
     }, 0);
+    document.querySelector(".container").style.filter = "blur(3px)";
     return true ;
 }
 
@@ -37,7 +38,9 @@ function menu_close() {
     console.log('Menu close function called.');
     const icon = document.querySelector(".aside_icon");
     menu.style.width = "0%";
-    setTimeout(() => {menu.style.display = "none";}, 900);
+    document.querySelector(".container").style.filter = "blur(0px)"
+    setTimeout(() => {menu.style.display = "none";
+}, 900);
 }
 
 document.addEventListener('click', function(event) {
@@ -49,4 +52,4 @@ document.addEventListener('click', function(event) {
 
 function menu_color(color){
     menu.style.background = color;
-}
+};

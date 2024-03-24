@@ -211,3 +211,6 @@ svg {
     
 }
 
+.blurr {
+    filter: blur(2px);
+}
