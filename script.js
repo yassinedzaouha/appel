@@ -39,4 +39,4 @@ function menu_close() {
 svg.addEventListener('click', function(event) {
     event.stopPropagation();
 });
-container.addEventListener('click',menu_close());
+container.addEventListener('click',menu_close);
