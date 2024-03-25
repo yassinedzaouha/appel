@@ -16,7 +16,7 @@
             <li><a href="#">News</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            </ul>
+        </ul>
     </div>
 
     <div class="container">
@@ -30,7 +30,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-                <svg onclick="nav()"  class="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg onclick="menu_open()"  class="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 18L20 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
                 <path d="M4 12L20 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
                 <path d="M4 6L20 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
@@ -51,11 +51,11 @@
             </div>
 
             <div class="icons">
-                <img onclick="phones(this.src) ; zoomIn() ; menu_color('gray') ; colors('#000')" src="iphon_imgs/0.png">
-                <img onclick="phones(this.src) ; zoomIn() ; menu_color('#a7c5df') ; colors('#247ec8')" src="iphon_imgs/1.png">
-                <img onclick="phones(this.src) ; zoomIn() ; menu_color('#606060') ; colors('#1e1e1e')" src="iphon_imgs/2.png">
-                <img onclick="phones(this.src) ; zoomIn() ; menu_color('#e1cdb4') ; colors('#c79b53')" src="iphon_imgs/3.png">
-                <img onclick="phones(this.src) ; zoomIn() ; menu_color('#ff5050') ; colors('#c82525')" src="iphon_imgs/4.png">
+                <img onclick="phones_colors(this.src ,   '#000'   ,   'gray') ; zoomIn()" src="iphon_imgs/0.png">
+                <img onclick="phones_colors(this.src , '#247ec8' , '#a7c5df') ; zoomIn()" src="iphon_imgs/1.png">
+                <img onclick="phones_colors(this.src , '#1e1e1e' , '#606060') ; zoomIn()" src="iphon_imgs/2.png">
+                <img onclick="phones_colors(this.src , '#c79b53' , '#e1cdb4') ; zoomIn()" src="iphon_imgs/3.png">
+                <img onclick="phones_colors(this.src , '#c82525' , '#ff5050') ; zoomIn()" src="iphon_imgs/4.png">
             </div>
 
         </section>

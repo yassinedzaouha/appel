@@ -1,55 +1,42 @@
-let img = document.querySelector(".img");
-let cont = document.querySelector(".container");
+const img = document.querySelector(".img");
+const cont = document.querySelector(".container");
+const menu = document.querySelector(".div_menu");
+const svg = document.querySelector(".svg");
+const container = document.querySelector(".container");
+const menu_icon = document.querySelector(".menu_icon");
 
-function phones(phone) {
+
+// change the pictur of phone and the background and the background of menu
+function phones_colors(phone , color , c) {
     img.src = phone;
-}
-
-function colors(color) {
     cont.style.background = color;
+    menu.style.background = c;
 }
 
+// zoom in of the big pictur when the click in icons 
 function zoomIn() {
     img.classList.add('zoomed-in');
-
-    setTimeout(zoomOut, 800);
-
-    function zoomOut() {
-    img.classList.remove('zoomed-in');
-    }
-
+    setTimeout(() => {img.classList.remove('zoomed-in');}, 800);
 }
 
-const menu = document.querySelector(".div_menu");
-const menu_icon = document.querySelector(".svg");
-
-function nav(){
+// open the menu
+function menu_open(){
     menu.style.display = "block";
     setTimeout(() => {
-        menu_icon.style.color = "transparent";
         menu.style.width = "50%";
-        menu.style.transition = "1s";
+        menu_icon.style.transform = "translateY(0px)";
     }, 0);
-    document.querySelector(".container").style.filter = "blur(3px)";
-    return true ;
+    container.style.filter = "blur(3px)";
 }
 
 function menu_close() {
-    console.log('Menu close function called.');
-    const icon = document.querySelector(".aside_icon");
     menu.style.width = "0%";
-    document.querySelector(".container").style.filter = "blur(0px)"
-    setTimeout(() => {menu.style.display = "none";
-}, 900);
+    container.style.filter = "blur(0px)";
+    menu_icon.style.transform = "translateY(-200px)";
+    setTimeout(() => {menu.style.display = "none";}, 900);
 }
 
-document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('svg')) {
-        return 0;
-    }
-    menu_close();
+svg.addEventListener('click', function(event) {
+    event.stopPropagation();
 });
-
-function menu_color(color){
-    menu.style.background = color;
-};
+container.addEventListener('click',menu_close());
